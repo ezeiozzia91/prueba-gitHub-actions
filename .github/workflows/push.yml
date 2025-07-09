@@ -10,9 +10,10 @@ jobs:
       - name: build and push to docker
         uses: docker/build-push-action@v1
         with:
-          context: .
+          path: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/prueba-github-actions:${{ github.sha }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           username: ${{ secrets.DOCKER_USERNAME }}
+          repository: ${{ secrets.DOCKER_USERNAME }}/prueba-github-actions
+          tags: latest
 
