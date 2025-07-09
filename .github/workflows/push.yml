@@ -12,7 +12,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/prueba-gitHub-actions:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/prueba-github-actions:${{ github.sha }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           username: ${{ secrets.DOCKER_USERNAME }}
 
